@@ -1,0 +1,11 @@
+@prefix ex:   <http://example.org/ada#> .
+@prefix rxnorm: <http://rxnorm.info/rdf/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+rxnorm:8600 rdfs:label "GLP-1 Receptor Agonist" .
+
+ex:CGM_MedicareCoverage a ex:CoverageRule ;
+    ex:payer "medicare" ;
+    ex:intervention "CGM" ;
+    ex:requiresPriorAuth true ;
+    ex:minAge 65 .

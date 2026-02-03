@@ -1,0 +1,6 @@
+{
+  "thresholds": {
+    "hba1c_recency_days": 60,
+    "annual_eye_exam_days": 180
+  }
+}

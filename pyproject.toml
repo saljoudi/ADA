@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ada-cds"
+version = "0.1.0"
+description = "ADA Clinical Reasoning Engine"
+authors = ["ADA Team <team@example.com>"]
+packages = [{ include = "ada_cds" }, { include = "api" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.110.0"
+pydantic = "^1.10.14"
+pyyaml = "^6.0.1"
+rdflib = "^7.0.0"
+uvicorn = "^0.27.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
