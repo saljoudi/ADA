@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ada-clinical-reasoning-engine
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: API_KEY
+        value: demo-key
+      - key: PYTHONPATH
+        value: /opt/render/project/src
+      - key: CONFIG_DIR
+        value: /opt/render/project/src/configs/tenants
+      - key: ONTOLOGY_DIR
+        value: /opt/render/project/src/ontologies
